@@ -13,7 +13,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
     <style>
       .btn-custom {
         background-color: #7702fc;
@@ -37,7 +38,7 @@
       >
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading1" > Projects</a>
+          <a class="nav-link" href="#scrollspyHeading1"> Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#scrollspyHeading2">Contact me</a>
@@ -85,21 +86,23 @@
         <div class="card" style="width: 18rem" data-aos="fade-up">
           <!-- // -->
           <% if (post.imageUrl) { %>
-            <img height="286px" width="286px" class="card-img-top" src=" <%= post.imageUrl %>" alt="Post Image" width="150">
-        <% } %>
-          <!-- // -->
-
-          <!-- <img -->
-            <!-- src="https://via.placeholder.com/150" -->
-            <!-- class="card-img-top" -->
-            <!-- alt="Sample Image" -->
-          <!-- /> -->
+          <img
+            height="286px"
+            width="286px"
+            class="card-img-top"
+            src=" <%= post.imageUrl %>"
+            alt="Post Image"
+            width="150"
+          />
+          <% } %>
           <div class="card-body">
             <h5 class="card-title"><b><%= post.username %></b></h5>
             <p class="card-text"><%= post.content %></p>
-            <a href="http://localhost:8000/posts/<%= post.id %>" class="read">Read more</a>
+            <a href="http://localhost:8000/posts/<%= post.id %>" class="read"
+              >Read more</a
+            >
             <a
-              href="http://localhost:8000/posts/new<%= post.id %>/edit"
+              href="http://localhost:8000/posts/edit/<%= post.id %>"
               class="btn btn-primary"
               >Edit Post</a
             ><br />
